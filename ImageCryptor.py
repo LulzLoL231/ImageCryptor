@@ -185,7 +185,7 @@ class Crypto:
             enc_data = enc.encrypt(b_data)
             if DEBUG is False:
                 print(enc_data)
-            file_name = f'temp{str(secrets.randbits(20))}'
+            file_name = f'Temp{str(secrets.randbits(20))}'
             self.log.debug(f'"encryptFile": Generated filename: {file_name}')
             header = 'ENCWIC::'
             enc = AESCipher(MAIN_KEY)
