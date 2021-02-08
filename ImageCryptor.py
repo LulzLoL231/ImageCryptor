@@ -176,7 +176,7 @@ class Crypto:
                 data = f.read()
             if DEBUG is False:
                 print(str(data))
-            b_data = b64encode(data).decode
+            b_data = b64encode(data).decode()
             if DEBUG is False:
                 print(b_data)
             key = self.getRandomKey()
@@ -252,12 +252,16 @@ class Crypto:
                                     f.write(dec_data)
                                 os.startfile(filename)
                                 time.sleep(1)
-                                os.remove(filename)
+                                if DEBUG is False:
+                                    os.remove(filename)
 
 
 if DEBUG and 'ENCWIC_FILE' in os.environ:
     Crypto().decryptFile(os.environ.get('ENCWIC_FILE'))
 
+
+if DEBUG and 'ENCWIC_ENCFILE' in os.environ:
+    Crypto().encryptFile(os.environ.get('ENCWIC_ENCFILE'))
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
