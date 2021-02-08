@@ -6,7 +6,7 @@ Mostly just for lulz.
 
 ### Requirements?
 For release: only Windows.
-For development: pycryptodome, py2exe.
+For development: pycryptodome, pyinstaller.
 
 ### What about security?
 It is not secure, the key and the encrypted data are stored in the same file, which makes such encryption meaningless.
